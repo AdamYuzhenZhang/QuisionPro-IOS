@@ -27,7 +27,7 @@ public class SceneController : MonoBehaviour
         if (LeftEye)
         {
             Vector3 eyePos = LeftEye.transform.position;
-            m_ViewerCamRoot.transform.position = new Vector3(-eyePos.x, eyePos.y, eyePos.z);
+            m_ViewerCamRoot.transform.position = new Vector3(eyePos.x, eyePos.y, eyePos.z);
             //m_ViewerCamRoot.transform.position = LeftEye.transform.position;
             //m_ViewerCamRoot.transform.rotation = LeftEye.transform.rotation;
         }
