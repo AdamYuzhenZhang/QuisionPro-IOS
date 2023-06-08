@@ -1914,7 +1914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ViewerCam: {fileID: 1721967271}
   m_ARCam: {fileID: 1818566708}
-  m_SpectatorCam: {fileID: 0}
+  m_SpectatorCam: {fileID: 924180909}
 --- !u!1 &924180906
 GameObject:
   m_ObjectHideFlags: 0
