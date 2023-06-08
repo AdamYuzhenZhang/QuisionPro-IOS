@@ -32,4 +32,15 @@ public class SceneController : MonoBehaviour
             //m_ViewerCamRoot.transform.rotation = LeftEye.transform.rotation;
         }
     }
+    
+    
+    // match scene rotation
+    [SerializeField] private GameObject m_SceneRoot;
+    [SerializeField] private GameObject m_ARCam;
+
+    private void MatchSceneRotation()
+    {
+        Vector3 eulerRotation = m_ARCam.transform.rotation.eulerAngles;
+        m_SceneRoot.transform.rotation = Quaternion.Euler(new Vector3(eulerRotation.x, -eulerRotation.y, -eulerRotation.z));
+    }
 }
