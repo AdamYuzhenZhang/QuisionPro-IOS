@@ -32,7 +32,7 @@ public class SceneController : MonoBehaviour
             //m_ViewerCamRoot.transform.rotation = LeftEye.transform.rotation;
         }
         
-        MatchSceneRotation();
+        //MatchSceneRotation();
     }
     
     
