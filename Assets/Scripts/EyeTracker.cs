@@ -17,6 +17,8 @@ public class EyeTracker : MonoBehaviour
     //private XRFaceSubsystem m_XRFaceSubSystem;
     //[SerializeField] private TextMeshProUGUI m_DebugText;
 
+    //private SceneController m_SceneController;
+
     private void Awake()
     {
         m_ARFace = GetComponent<ARFace>();
@@ -50,11 +52,15 @@ public class EyeTracker : MonoBehaviour
         {
             m_LeftEye = Instantiate(m_EyePrefab, m_ARFace.leftEye);
             m_LeftEye.SetActive(false);
+            SceneController sceneController = FindObjectOfType<SceneController>();
+            if (sceneController) sceneController.LeftEye = m_LeftEye;
         }
         if (m_ARFace.rightEye && !m_RightEye)
         {
             m_RightEye = Instantiate(m_EyePrefab, m_ARFace.rightEye);
             m_RightEye.SetActive(false);
+            SceneController sceneController = FindObjectOfType<SceneController>();
+            if (sceneController) sceneController.RightEye = m_RightEye;
         }
 
         bool visible = (m_ARFace.trackingState == TrackingState.Tracking) &&
