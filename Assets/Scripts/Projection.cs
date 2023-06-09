@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// The projection code is based on TheParallaxView project
+// https://github.com/algomystic/TheParallaxView
+
 public class Projection : MonoBehaviour
 {
     [SerializeField] private Camera m_ViewerCam;
